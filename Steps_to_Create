@@ -1,0 +1,66 @@
+Project Title:
+
+SET UP EC2 AUTO SCALING WITH ALB PATH BASED ROUTING
+
+Steps of Procedure and Output:
+------------------------------------------
+
+Step-01:
+Login to AWS Console and Go to Amazon VPC, now create a new VPC.
+Name your VPC ad auto-scaling.
+
+Step-02:
+In right menu you can see Subnets go to it and create a subnet.Create 4 different subnets.
+
+Step-03:
+Go to Internet Gateway and create an Internet Gateway name it as autoscaling-igw.
+
+Step-04:
+Now attach the internet gateway to created VPC.
+
+Step-05:
+Now once go to all the subnets created are in available state.Click any subnet and edit its route table.
+Update the route table for all the subnets it connected.
+
+Step-06:
+Create a Security Group named as autoscaling-sg
+
+Step-07:
+Now specify a target group
+Now we are specifying the target group for application1.
+
+Step-08:
+We all done this for creating a Load Balancer.
+After this fill the required things in LB creation and create a Load Balancer named alb-demo
+
+Step-09:
+Now create an instance to connect with our applications.Instance is successfully created.
+
+Step-10:
+Now open Putty to connect with the ec2-user.
+
+Step-11:
+Create an AMI Images for instances named as Application1 and Application2.
+
+Step-12:
+Now Launch Configuration in Auto Scaling and Now create it for application2.
+
+Step-13:
+Now create an Auto-scaling group for application1.
+
+Step-14:
+i. Create a target group for it.
+ii. Edit the rules.
+iii. Create separate rules for that the application will get by giving the path name continuing DNS name.
+
+Step-15:
+Create an auto-scaling group for application2.See the instances created for application2.
+
+So, this works, Hence the setup of ec2 auto scaling with ALB path-based routing is successfully completed.
+
+
+
+
+
+
+
